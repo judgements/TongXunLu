@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "F:\\tools\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				// "${file}",
+				"${workspaceFolder}\\*.c",
+				//通过把"${file}"修改为"${workspaceFolder}\\*.c"，可以构建当前工作区中的所有C文件。
+				//通过把"${file}"修改为"${workspaceFolder}\\*.cpp"，可以构建当前工作区中的所有C++文件。
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				// "${workspaceFolder}\\myProgram.exe"
+				// "${workspaceFolder}\\${workspaceRootFolderName}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: F:\\tools\\mingw64\\bin\\gcc.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "F:\\tools\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: F:\\tools\\mingw64\\bin\\g++.exe"
+		}
+	]
+}
